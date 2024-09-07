@@ -2,6 +2,7 @@
 {
     public partial class RoundButton : RoundControl
     {
+        public string ButtonText { get => button1.Text; set => button1.Text = value; }
         public bool UseMouseOverBackColor { get; set; } = false;
         public Color MouseOverBackColor { get; set; }
         private Color backgroundColor;
@@ -21,19 +22,20 @@
             button1.Width = Width - 40;
             button1.Height = Height - 40;
             button1.BackColor = BackgroundColor;
+            button1.FlatAppearance.BorderColor = BackgroundColor;
         }
 
         private void button1_Click(object sender, EventArgs e) => InvokeOnClick(this, e);
 
         private void button1_MouseEnter(object sender, EventArgs e)
         {
-            if (UseMouseOverBackColor && MouseOverBackColor != backgroundColor)
+            if (UseMouseOverBackColor)
                 BackgroundColor = button1.BackColor = MouseOverBackColor;
         }
 
         private void button1_MouseLeave(object sender, EventArgs e)
         {
-            if (UseMouseOverBackColor && MouseOverBackColor != backgroundColor)
+            if (UseMouseOverBackColor)
                 BackgroundColor = button1.BackColor = backgroundColor;
         }
     }

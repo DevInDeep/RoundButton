@@ -28,28 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            roundControl1 = new RoundControl();
             roundButton1 = new RoundButton();
+            label1 = new Label();
             SuspendLayout();
-            // 
-            // roundControl1
-            // 
-            roundControl1.BackgroundColor = SystemColors.ActiveCaption;
-            roundControl1.BorderColor = SystemColors.Control;
-            roundControl1.BorderWidth = 1F;
-            roundControl1.Location = new Point(313, 65);
-            roundControl1.Name = "roundControl1";
-            roundControl1.Radius = 20;
-            roundControl1.Size = new Size(375, 375);
-            roundControl1.TabIndex = 0;
             // 
             // roundButton1
             // 
-            roundButton1.BackgroundColor = Color.FromArgb(255, 192, 128);
-            roundButton1.BorderColor = Color.Black;
-            roundButton1.BorderWidth = 5F;
-            roundButton1.Location = new Point(838, 225);
-            roundButton1.MouseOverBackColor = Color.FromArgb(255, 192, 192);
+            roundButton1.BackgroundColor = Color.FromArgb(11, 205, 255);
+            roundButton1.BorderColor = Color.White;
+            roundButton1.BorderWidth = 7F;
+            roundButton1.ButtonText = "Say Hi";
+            roundButton1.Location = new Point(78, 67);
+            roundButton1.MouseOverBackColor = SystemColors.Control;
             roundButton1.Name = "roundButton1";
             roundButton1.Radius = 20;
             roundButton1.Size = new Size(263, 89);
@@ -57,21 +47,32 @@
             roundButton1.UseMouseOverBackColor = true;
             roundButton1.Click += roundButton1_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 14.1F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(388, 77);
+            label1.Name = "label1";
+            label1.Size = new Size(0, 62);
+            label1.TabIndex = 2;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(17F, 41F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1645, 495);
+            BackColor = Color.FromArgb(33, 37, 41);
+            ClientSize = new Size(1015, 493);
+            Controls.Add(label1);
             Controls.Add(roundButton1);
-            Controls.Add(roundControl1);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
-
-        private RoundControl roundControl1;
         private RoundButton roundButton1;
+        private Label label1;
     }
 }

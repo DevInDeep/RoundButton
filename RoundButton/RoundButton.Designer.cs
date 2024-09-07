@@ -52,6 +52,7 @@
             AutoScaleDimensions = new SizeF(17F, 41F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(button1);
+            DoubleBuffered = true;
             Name = "RoundButton";
             Size = new Size(322, 282);
             Load += RoundButton_Load;
