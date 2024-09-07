@@ -45,14 +45,16 @@
             // 
             // roundButton1
             // 
-            roundButton1.BackgroundColor = Color.FromArgb(11, 205, 255);
+            roundButton1.BackgroundColor = Color.FromArgb(255, 192, 128);
             roundButton1.BorderColor = Color.Black;
             roundButton1.BorderWidth = 5F;
             roundButton1.Location = new Point(838, 225);
+            roundButton1.MouseOverBackColor = Color.FromArgb(255, 192, 192);
             roundButton1.Name = "roundButton1";
             roundButton1.Radius = 20;
             roundButton1.Size = new Size(263, 89);
             roundButton1.TabIndex = 1;
+            roundButton1.UseMouseOverBackColor = true;
             roundButton1.Click += roundButton1_Click;
             // 
             // Form1

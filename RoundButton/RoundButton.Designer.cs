@@ -44,6 +44,8 @@
             button1.Text = "button1";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
+            button1.MouseEnter += button1_MouseEnter;
+            button1.MouseLeave += button1_MouseLeave;
             // 
             // RoundButton
             // 
@@ -52,6 +54,7 @@
             Controls.Add(button1);
             Name = "RoundButton";
             Size = new Size(322, 282);
+            Load += RoundButton_Load;
             ResumeLayout(false);
         }
 
