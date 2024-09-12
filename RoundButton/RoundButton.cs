@@ -11,7 +11,6 @@
         {
             button1.FlatAppearance.MouseOverBackColor = Color.Transparent;
             button1.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            button1.FlatAppearance.BorderSize = 0;
             button1.BackColor = BackgroundColor;
             backgroundColor = BackgroundColor;
         }
@@ -22,7 +21,6 @@
             button1.Width = Width - 40;
             button1.Height = Height - 40;
             button1.BackColor = BackgroundColor;
-            button1.FlatAppearance.BorderColor = BackgroundColor;
         }
 
         private void button1_Click(object sender, EventArgs e) => InvokeOnClick(this, e);
