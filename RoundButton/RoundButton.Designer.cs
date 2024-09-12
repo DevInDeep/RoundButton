@@ -56,6 +56,8 @@
             Name = "RoundButton";
             Size = new Size(322, 282);
             Load += RoundButton_Load;
+            MouseEnter += RoundButton_MouseEnter;
+            MouseLeave += RoundButton_MouseLeave;
             ResumeLayout(false);
         }
 

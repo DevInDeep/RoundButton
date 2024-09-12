@@ -18,8 +18,7 @@
         {
             base.OnPaint(e);
             button1.Location = new Point(20, 20);
-            button1.Width = Width - 40;
-            button1.Height = Height - 40;
+            button1.Size = new Size(Size.Width - 40, Size.Height - 40);
             button1.BackColor = BackgroundColor;
         }
 
@@ -30,11 +29,15 @@
             if (UseMouseOverBackColor)
                 BackgroundColor = button1.BackColor = MouseOverBackColor;
         }
-
         private void button1_MouseLeave(object sender, EventArgs e)
         {
             if (UseMouseOverBackColor)
                 BackgroundColor = button1.BackColor = backgroundColor;
         }
+
+        private void RoundButton_MouseEnter(object sender, EventArgs e) => button1_MouseEnter((object)sender, e);
+
+        private void RoundButton_MouseLeave(object sender, EventArgs e) => button1_MouseLeave((object)sender, e);
+
     }
 }
